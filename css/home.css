@@ -1,0 +1,339 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(249, 250, 251, 0.95)
+  );
+  padding: calc(var(--header-height) + var(--space-8)) 0 var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    var(--color-primary-100) 1px,
+    transparent 1px
+  );
+  background-size: 30px 30px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: var(--space-2);
+  position: relative;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-6);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-8);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.shape-1,
+.shape-2,
+.shape-3 {
+  position: absolute;
+  border-radius: var(--radius-2xl);
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-400),
+    var(--color-primary-600)
+  );
+  transform: rotate(-15deg);
+  opacity: 0.1;
+  animation: float 8s ease-in-out infinite;
+}
+
+.shape-2 {
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary-400),
+    var(--color-secondary-600)
+  );
+  transform: rotate(15deg);
+  opacity: 0.15;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+  width: 260px;
+  height: 260px;
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-400),
+    var(--color-accent-600)
+  );
+  opacity: 0.1;
+  animation: float 9s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* Intro Section */
+.intro {
+  background-color: white;
+  position: relative;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.service-card {
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  transition: all var(--transition) ease;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-50),
+    var(--color-primary-100)
+  );
+  transition: height var(--transition) ease;
+  z-index: -1;
+}
+
+.service-card:hover::before {
+  height: 100%;
+}
+
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-600);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-4);
+  transition: all var(--transition) ease;
+}
+
+.service-card:hover .service-icon {
+  background-color: var(--color-primary-600);
+  color: white;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-3);
+}
+
+.service-card p {
+  color: var(--color-gray-600);
+  margin-bottom: 0;
+}
+
+/* Featured Projects Section */
+.featured-projects {
+  background-color: var(--color-gray-50);
+}
+
+.project-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.project-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.browser-mockup {
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 6px;
+  padding: 0.75rem;
+  background-color: var(--color-gray-200);
+}
+
+.browser-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-gray-300);
+}
+
+.browser-dots span:nth-child(1) {
+  background-color: #ff5f56;
+}
+
+.browser-dots span:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.browser-dots span:nth-child(3) {
+  background-color: #27c93f;
+}
+
+.browser-content {
+  height: 300px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-100),
+    var(--color-primary-200)
+  );
+}
+
+.browser-content > img {
+  height: 300px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-100),
+    var(--color-primary-200)
+  );
+}
+
+.project-info h3 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-3);
+}
+
+.project-info p {
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-6);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.project-tags span {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .project-preview {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

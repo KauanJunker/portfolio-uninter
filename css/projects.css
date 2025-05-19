@@ -1,0 +1,239 @@
+.projects-filter {
+  background-color: white;
+  padding-bottom: 0;
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-10);
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-gray-600);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast) ease;
+}
+
+.filter-btn:hover {
+  color: var(--color-primary-600);
+}
+
+.filter-btn.active {
+  background-color: var(--color-primary-600);
+  color: white;
+}
+
+/* Projects Grid */
+.projects-grid {
+  background-color: white;
+  padding-top: 0;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-8);
+}
+
+.project-card {
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition) ease;
+  box-shadow: var(--shadow);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Browser Mockup (reused from home.css) */
+.browser-mockup {
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 6px;
+  padding: 0.75rem;
+  background-color: var(--color-gray-200);
+}
+
+.browser-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.browser-dots span:nth-child(1) {
+  background-color: #ff5f56;
+}
+
+.browser-dots span:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.browser-dots span:nth-child(3) {
+  background-color: #27c93f;
+}
+
+.browser-content {
+  height: 200px;
+}
+.browser-content > img {
+  height: 200px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-100),
+    var(--color-primary-200)
+  );
+}
+
+/* Mobile Mockup */
+.mobile-mockup {
+  background-color: var(--color-gray-900);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  padding: 0.75rem;
+}
+
+.mobile-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-notch {
+  width: 80px;
+  height: 1.5rem;
+  background-color: var(--color-gray-800);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.mobile-content {
+  height: 200px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Design Mockup */
+.design-mockup {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.design-content {
+  height: 200px;
+}
+
+/* Project Background Colors */
+.project-1 {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.project-2 {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.project-3 {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.project-4 {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.project-5 {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.project-6 {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+/* Project Info */
+.project-info {
+  padding: var(--space-6);
+}
+
+.project-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-2);
+}
+
+.project-info p {
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-4);
+  font-size: 0.95rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.project-tags span {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-600),
+    var(--color-primary-700)
+  );
+  color: white;
+  text-align: center;
+  padding: var(--space-16) 0;
+  margin-top: var(--space-10);
+}
+
+.cta-content h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: var(--space-4);
+}
+
+.cta-content p {
+  color: var(--color-primary-200);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto var(--space-8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
