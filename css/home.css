@@ -256,6 +256,7 @@
 
 .browser-content {
   height: 300px;
+  width: 100%;
   background: linear-gradient(
     135deg,
     var(--color-primary-100),
@@ -265,6 +266,7 @@
 
 .browser-content > img {
   height: 300px;
+  width: 100%;
   background: linear-gradient(
     135deg,
     var(--color-primary-100),
